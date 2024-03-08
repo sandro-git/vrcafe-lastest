@@ -1,11 +1,7 @@
 ---
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
-import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-import Alice from "@assets/Alice.jpg";
-
-const games = await getCollection("games");
+import Card from "@components/Card.astro";
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
@@ -13,13 +9,8 @@ const games = await getCollection("games");
 <html>
   <body>
     <h1 class="text-3xl">Hello, World!</h1>
-    {
-      games.map((game) => (
-        <>
-          <p>{game.data.name}</p>
-          <Image src={Alice} alt={game.data.name} />
-        </>
-      ))
-    }
+    <div class="grid grid-cols-4 gap-4 container mx-auto">
+      <Card />
+    </div>
   </body>
 </html>
