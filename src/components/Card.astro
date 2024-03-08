@@ -1,19 +1,27 @@
 ---
-import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-
-const games = await getCollection("games");
+import CardImage from "./CardImage.astro";
+import CardLink from "./CardLink.astro";
+import CardText from "./CardText.astro";
+import CardTitle from "./CardTitle.astro";
+interface Props {
+  game: {
+    image: ImageMetadata;
+    alt: string;
+    name: string;
+  };
+  slug: string;
+  text: string;
+}
+const { game, slug, text } = Astro.props;
 ---
 
-{
-  games.map((game) => (
-    <div class="rounded-2xl overflow-hidden ">
-      <div class="max-w-full block">
-        <Image src={game.data.image} alt={game.data.alt} />
-      </div>
-      <p class="py-4 text-2xl text-center block bg-slate-300">
-        {game.data.name}
-      </p>
-    </div>
-  ))
-}
+<div
+  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+>
+  <CardImage src={game.image} alt={game.alt} slug={slug} />
+  <div class="p-5">
+    <CardTitle title={game.name} slug={slug} />
+    <CardText text={text} />
+    <CardLink slug={slug} />
+  </div>
+</div>

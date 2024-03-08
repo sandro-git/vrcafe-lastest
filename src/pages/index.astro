@@ -2,15 +2,21 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import Card from "@components/Card.astro";
+import BaseLayout from "src/Layouts/BaseLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const games = await getCollection("games");
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1 class="text-3xl">Hello, World!</h1>
-    <div class="grid grid-cols-4 gap-4 container mx-auto">
-      <Card />
-    </div>
-  </body>
-</html>
+<BaseLayout>
+  <div class="grid grid-cols-4 gap-4 container mx-auto">
+    {
+      games.map((game) => (
+        <Card game={game.data} slug={game.slug} text={game.body} />
+      ))
+    }
+  </div>
+</BaseLayout>
