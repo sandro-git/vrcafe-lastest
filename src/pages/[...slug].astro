@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const games = await getCollection("games");
+  return games.map(({ slug, data }) => ({
+    params: { slug: slug },
+    props: { data },
+  }));
+}
+
+interface data {
+  name: string;
+  image: ImageMetadata;
+}
+
+// const { slug } = Astro.params;
+const { data } = Astro.props;
+---
+
+<BaseLayout>
+  <h1 class="text-white">{data.name}</h1>
+  <Image src={data.image} alt={data.alt} />
+</BaseLayout>
