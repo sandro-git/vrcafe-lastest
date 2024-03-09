@@ -3,40 +3,23 @@
 // is your "component frontmatter". It never runs in the browser.
 import { getCollection } from "astro:content";
 
+//components
 import Card from "@components/Card.astro";
 import LandingImage from "@components/LandingImage.astro";
 import Title from "@components/Title.astro";
-
+import BaseLayout from "@layouts/BaseLayout.astro";
+//data
 const games = await getCollection("games");
-import NavBar from "@components/NavBar.astro";
 ---
 
-<!doctype html>
-<html lang="fr" class="smooth scroll-smooth pt-16">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VR Café</title>
-  </head>
-  <body class="dark:bg-gray-800">
-    <NavBar />
-    <LandingImage />
-    <Title title="Escape Games" />
-    <div class="grid grid-cols-4 gap-4 container mx-auto">
-      {
-        games.map((game) => (
-          <Card game={game.data} slug={game.slug} text={game.body} />
-        ))
-      }
-    </div>
-  </body>
-</html>
-
-<style>
-  :root {
-    --navHeight: 8rem;
-  }
-  html {
-    scroll-padding-top: var(--navHeight);
-  }
-</style>
+<BaseLayout>
+  <LandingImage />
+  <Title title="Escape Games" />
+  <div class="grid grid-cols-4 gap-4 container mx-auto">
+    {
+      games.map((game) => (
+        <Card game={game.data} slug={game.slug} text={game.body} />
+      ))
+    }
+  </div>
+</BaseLayout>
