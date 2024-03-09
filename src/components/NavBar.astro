@@ -1,3 +1,8 @@
+---
+import Logo from "@assets/logo.png";
+import { Image } from "astro:assets";
+---
+
 <nav
   class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-900"
 >
@@ -5,18 +10,11 @@
     class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
   >
     <!-- Logo -->
-    <a
-      href="https://flowbite.com/"
-      class="flex items-center space-x-3 rtl:space-x-reverse"
-    >
-      <img
-        src="https://flowbite.com/docs/images/logo.svg"
-        class="h-8"
-        alt="Flowbite Logo"
-      />
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <Image src={Logo} class="w-8" alt="Flowbite Logo" />
       <span
         class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
-        >Flowbite</span
+        >VR Café</span
       >
     </a>
     <!-- Button -->
@@ -24,7 +22,7 @@
       <button
         type="button"
         class="rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >Get started</button
+        >Réserver</button
       >
       <button
         data-collapse-toggle="navbar-sticky"
