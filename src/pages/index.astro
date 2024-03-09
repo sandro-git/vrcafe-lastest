@@ -9,18 +9,35 @@ import Title from "@components/Title.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const games = await getCollection("games");
+import NavBar from "@components/NavBar.astro";
 ---
 
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
-<BaseLayout>
-  <LandingImage />
-  <Title title="Escape Games" />
-  <div class="grid grid-cols-4 gap-4 container mx-auto">
-    {
-      games.map((game) => (
-        <Card game={game.data} slug={game.slug} text={game.body} />
-      ))
-    }
-  </div>
-</BaseLayout>
+<!doctype html>
+<html lang="fr" class="smooth scroll-smooth pt-16">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VR Café</title>
+  </head>
+  <body class="dark:bg-gray-800">
+    <NavBar />
+    <LandingImage />
+    <Title title="Escape Games" />
+    <div class="grid grid-cols-4 gap-4 container mx-auto">
+      {
+        games.map((game) => (
+          <Card game={game.data} slug={game.slug} text={game.body} />
+        ))
+      }
+    </div>
+  </body>
+</html>
+
+<style>
+  :root {
+    --navHeight: 8rem;
+  }
+  html {
+    scroll-padding-top: var(--navHeight);
+  }
+</style>
