@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "@layouts/BaseLayout.astro";
 import Image from "astro/components/Image.astro";
 
 export const prerender = true;
@@ -22,7 +21,5 @@ interface data {
 const { data } = Astro.props;
 ---
 
-<BaseLayout>
-  <h1 class="text-white">{data.name}</h1>
-  <Image src={data.image} alt={data.alt} />
-</BaseLayout>
+<h1 class="text-white">{data.name}</h1>
+<Image src={data.image} alt={data.alt} />
