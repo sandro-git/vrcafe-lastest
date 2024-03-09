@@ -3,11 +3,10 @@
 // is your "component frontmatter". It never runs in the browser.
 import { getCollection } from "astro:content";
 
-import BaseLayout from "../layouts/BaseLayout.astro";
-
 import Card from "@components/Card.astro";
 import LandingImage from "@components/LandingImage.astro";
 import Title from "@components/Title.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 
 const games = await getCollection("games");
 ---

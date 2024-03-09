@@ -1,5 +1,5 @@
 ---
 name: "Chernobyl"
-image: "@assets/chernobyl.jpg"
+image: "@assets/Chernobyl.jpg"
 alt: "Image du jeu Chernobyl"
 ---
