@@ -15,7 +15,7 @@ const games = await getCollection("games");
 <BaseLayout>
   <LandingImage />
   <Title title="Escape Games" />
-  <div class="grid grid-cols-4 gap-4 container mx-auto">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 container mx-auto">
     {
       games.map((game) => (
         <Card game={game.data} slug={game.slug} text={game.body} />

@@ -9,6 +9,7 @@ const blogCollection = defineCollection({
       //define Image.
       image: image(),
       alt: z.string(),
+      video: z.string().optional(),
     }),
 });
 // 3. Export a single `collections` object to register your collection(s)
