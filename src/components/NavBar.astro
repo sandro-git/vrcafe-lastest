@@ -20,6 +20,7 @@ import { Image } from "astro:assets";
     <!-- Button -->
     <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
       <button
+        id="booking"
         type="button"
         class="rounded-lg bg-blue-700 px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Réserver</button
@@ -88,3 +89,8 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </nav>
+
+<script>
+  const button = document.querySelector("#booking");
+  button?.addEventListener("click", () => (location.href = "/reservation"));
+</script>

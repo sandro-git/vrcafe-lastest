@@ -10,38 +10,10 @@ import Title from "@components/Title.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 //data
 const games = await getCollection("games");
-import BookingWidget from "../components/reservation";
 ---
 
 <BaseLayout>
   <LandingImage />
-  <script
-    type="text/javascript"
-    src="//vr-cafe.checkfront.com/lib/interface--0.js"></script>
-  <!-- CHECKFRONT BOOKING PLUGIN v25-->
-  <div id="CHECKFRONT_WIDGET_01">
-    <p
-      id="CHECKFRONT_LOADER"
-      style="background: url('//vr-cafe.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px"
-    >
-      Searching Availability...
-    </p>
-  </div>
-  <script>
-    new DROPLET.Widget({
-      host: "vr-cafe.checkfront.com",
-      target: "CHECKFRONT_WIDGET_01",
-      options: "category_select",
-      provider: "droplet",
-    }).render();
-  </script>
-  <noscript
-    ><a href="https://vr-cafe.checkfront.com/reserve/" style="font-size: 16px"
-      >Continue to Secure Booking System &raquo;</a
-    ></noscript
-  >
-  <BookingWidget client:load />
-
   <Title title="Escape Games" />
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4 container mx-auto">
     {
