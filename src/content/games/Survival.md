@@ -1,6 +1,6 @@
 ---
 name: "Survival"
 image: "@assets/Survival.jpg"
-alt: "Image du jeu Survival"
+alt: "Jeu Survival"
 video: "/survival.webm"
 ---

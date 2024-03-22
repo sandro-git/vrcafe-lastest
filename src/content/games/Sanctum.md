@@ -1,6 +1,6 @@
 ---
 name: "Sanctum"
 image: "@assets/Sanctum.jpg"
-alt: "Image du jeu Cyberpunk"
+alt: "Jeu Sanctum"
 video: "/Sanct.webm"
 ---

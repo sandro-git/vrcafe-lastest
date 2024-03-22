@@ -1,7 +1,7 @@
 ---
 name: "Alice"
 image: "@assets/Alice.jpg"
-alt: "Image D'alice au pays des merveilles"
+alt: "Alice au pays des merveilles"
 video: "/Alice.webm"
 ---
 

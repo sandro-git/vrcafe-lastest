@@ -1,6 +1,6 @@
 ---
 name: "Christmas"
 image: "@assets/Christmas.jpg"
-alt: "Image du jeu Noël"
+alt: "Jeu Noël"
 video: "/Christmas.webm"
 ---

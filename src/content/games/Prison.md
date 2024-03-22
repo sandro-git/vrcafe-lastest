@@ -1,6 +1,6 @@
 ---
 name: "Prison"
 image: "@assets/Prison.jpg"
-alt: "Image du jeu Prison"
+alt: "Jeu Prison"
 video: "/Prison.webm"
 ---

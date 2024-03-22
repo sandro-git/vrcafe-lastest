@@ -1,6 +1,6 @@
 ---
 name: "Jungle Quest"
 image: "@assets/JQ.jpg"
-alt: "Image du jeu Jungle Quest"
+alt: "Jeu Jungle Quest"
 video: "/Jungle.webm"
 ---

@@ -1,6 +1,6 @@
 ---
 name: "Chernobyl"
 image: "@assets/Chernobyl.jpg"
-alt: "Image du jeu Chernobyl"
+alt: "Jeu Chernobyl"
 video: "/Chernobyl.webm"
 ---
