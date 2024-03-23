@@ -126,6 +126,97 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"games": {
+"Christmas.md": {
+	id: "Christmas.md";
+  slug: "christmas";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"Cyberpunk.md": {
+	id: "Cyberpunk.md";
+  slug: "cyberpunk";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"Hof3.md": {
+	id: "Hof3.md";
+  slug: "hof3";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"House.md": {
+	id: "House.md";
+  slug: "house";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"JungleQuest copy.md": {
+	id: "JungleQuest copy.md";
+  slug: "junglequest-copy";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"JungleQuest.md": {
+	id: "JungleQuest.md";
+  slug: "junglequest";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"MissionSigma.md": {
+	id: "MissionSigma.md";
+  slug: "missionsigma";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"Sanctum.md": {
+	id: "Sanctum.md";
+  slug: "sanctum";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"SignalLost.md": {
+	id: "SignalLost.md";
+  slug: "signallost";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"Survival.md": {
+	id: "Survival.md";
+  slug: "survival";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"alice.md": {
+	id: "alice.md";
+  slug: "alice";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"chernobyl.md": {
+	id: "chernobyl.md";
+  slug: "chernobyl";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
+"hof2.md": {
+	id: "hof2.md";
+  slug: "hof2";
+  body: string;
+  collection: "games";
+  data: InferEntrySchema<"games">
+} & { render(): Render[".md"] };
 };
 
 	};
